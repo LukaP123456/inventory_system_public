@@ -41,7 +41,7 @@ composer install
 ```
 3. Set up your MySQL database and configure the `.env` file with the necessary database credentials.
 ```
-DB_CONNECTION=sqlite
+DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 ```

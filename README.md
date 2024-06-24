@@ -1,6 +1,28 @@
-# Laravel REST API with Sanctum
+# QR Code and Item Tracking API
 
-This is an example of a REST API using auth tokens with Laravel Sanctum
+## Overview
+
+This API, built with Laravel, allows you to generate QR codes and manage item tracking within different rooms. Whether you're organizing inventory, managing assets, or tracking items, this API provides the necessary endpoints to streamline your processes.
+
+## Features
+
+1. **QR Code Generation:**
+    - Create QR codes for items, rooms, or any other relevant data.
+    - Retrieve QR code images for printing or digital use.
+
+2. **Item Tracking:**
+    - Add new items to the system, associating them with specific rooms.
+    - Update item details (e.g., name, description, quantity).
+    - Retrieve item information by ID or search criteria.
+
+3. **Room Management:**
+    - Define rooms and their properties (e.g., room number, location).
+    - Associate items with specific rooms.
+    - Retrieve room details and associated items.
+
+4. **Database Integration:**
+    - Utilizes MySQL as the backend database.
+    - Schema includes tables for items, rooms, and QR codes.
 
 ## Usage
 
@@ -12,14 +34,25 @@ DB_CONNECTION=sqlite
 DB_HOST=127.0.0.1
 DB_PORT=3306
 ```
-
-Create a _database.sqlite_ file in the _database_ directory
-
+1. Clone this repository to your local environment.
+2. Install Laravel dependencies using Composer:
 ```
-# Run the webserver on port 8000
+composer install
+```
+3. Set up your MySQL database and configure the `.env` file with the necessary database credentials.
+```
+DB_CONNECTION=sqlite
+DB_HOST=127.0.0.1
+DB_PORT=3306
+```
+4.Run migrations to create the required database tables:
+```
+php artisan migrate
+```
+5. Start the Laravel development server:
+```
 php artisan serve
 ```
-
 ## Routes
 
 ```
